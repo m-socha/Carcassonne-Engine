@@ -1,455 +1,455 @@
 [
   {
-    quantity: 4,
-    cities: [
+    "quantity": 4,
+    "cities": [
       {
-        positions: [1]
+        "positions": [1]
       }
     ],
-    roads: [
+    "roads": [
       {
-        positions: [2, 4]
+        "positions": [2, 4]
       }
     ],
-    farms: [
+    "farms": [
       {
-        positions: [b, h]
+        "positions": ["b", "h"]
       },
       {
-        positions: [c, d, e, f]
+        "positions": ["c", "d", "e", "f"]
       }
     ]
   },
 
   {
-    quantity: 4,
-    farms: [
+    "quantity": 4,
+    "farms": [
       {
-        positions: [a, b, c, d, e, f, g, h]
+        "positions": ["a", "b", "c", "d", "e", "f", "g", "h"]
       }
     ],
-    cloister: Y
+    "cloister": "Y"
   },
 
   {
-    quantity: 2,
-    roads: [
+    "quantity": 2,
+    "roads": [
       {
-        positions: [3]
+        "positions": [3]
       }
     ],
-    farms: [
+    "farms": [
       {
-        positions: [a, b, c, d, e, f, g, h]
+        "positions": ["a", "b", "c", "d", "e", "f", "g", "h"]
       }
     ],
-    cloister: Y
+    "cloister": "Y"
   },
 
   {
-    quantity: 1,
-    cities: [
+    "quantity": 1,
+    "cities": [
       {
-        positions: [1, 2, 3, 4],
-        shield: Y
-      }
-    ]
-  },
-
-  {
-    quantity: 3,
-    cities: [
-      {
-        positions: [1, 2, 4]
-      }
-    ],
-    farms: [
-      {
-        positions: [d, e]
+        "positions": [1, 2, 3, 4],
+        "shield": "Y"
       }
     ]
   },
 
   {
-    quantity: 1,
-    cities: [
+    "quantity": 3,
+    "cities": [
       {
-        positions: [1, 2, 4],
-        shield: Y
+        "positions": [1, 2, 4]
       }
     ],
-    farms: [
+    "farms": [
       {
-        positions: [d, e]
+        "positions": ["d", "e"]
       }
     ]
   },
 
   {
-    quantity: 1,
-    cities: [
+    "quantity": 1,
+    "cities": [
       {
-        positions: [1, 2, 4]
+        "positions": [1, 2, 4],
+        "shield": "Y"
       }
     ],
-    roads: [
+    "farms": [
       {
-        positions: [3]
-      }
-    ],
-    farms: [
-      {
-        positions: [d]
-      },
-      {
-        positions: [e]
+        "positions": ["d", "e"]
       }
     ]
   },
 
   {
-    quantity: 2,
-    cities: [
+    "quantity": 1,
+    "cities": [
       {
-        positions: [1, 2, 4],
-        shield: Y
+        "positions": [1, 2, 4]
       }
     ],
-    roads: [
+    "roads": [
       {
-        positions: [3]
+        "positions": [3]
       }
     ],
-    farms: [
+    "farms": [
       {
-        positions: [d]
+        "positions": ["d"]
       },
       {
-        positions: [e]
+        "positions": ["e"]
       }
     ]
   },
 
   {
-    quantity: 3,
-    cities: [
+    "quantity": 2,
+    "cities": [
       {
-        positions: [1, 4]
+        "positions": [1, 2, 4],
+        "shield": "Y"
       }
     ],
-    farms: [
+    "roads": [
       {
-        positions: [b, c, d, e]
-      }
-    ]
-  },
-
-  {
-    quantity: 2,
-    cities: [
-      {
-        positions: [1, 4],
-        shield: Y
+        "positions": [3]
       }
     ],
-    farms: [
+    "farms": [
       {
-        positions: [b, c, d, e]
+        "positions": ["d"]
+      },
+      {
+        "positions": ["e"]
       }
     ]
   },
 
   {
-    quantity: 3,
-    cities: [
+    "quantity": 3,
+    "cities": [
       {
-        positions: [1, 4]
+        "positions": [1, 4]
       }
     ],
-    roads: [
+    "farms": [
       {
-        positions: [2, 3]
+        "positions": ["b", "c", "d", "e"]
+      }
+    ]
+  },
+
+  {
+    "quantity": 2,
+    "cities": [
+      {
+        "positions": [1, 4],
+        "shield": "Y"
       }
     ],
-    farms: [
+    "farms": [
       {
-        positions: [b, e]
-      },
-      {
-        positions: [c, d]
+        "positions": ["b", "c", "d", "e"]
       }
     ]
   },
 
   {
-    quantity: 2,
-    cities: [
+    "quantity": 3,
+    "cities": [
       {
-        positions: [1, 4],
-        shield: Y
+        "positions": [1, 4]
       }
     ],
-    roads: [
+    "roads": [
       {
-        positions: [2, 3]
+        "positions": [2, 3]
       }
     ],
-    farms: [
+    "farms": [
       {
-        positions: [b, e]
+        "positions": ["b", "e"]
       },
       {
-        positions: [c, d]
+        "positions": ["c", "d"]
       }
     ]
   },
 
   {
-    quantity: 1,
-    cities: [
+    "quantity": 2,
+    "cities": [
       {
-        positions: [2, 4]
+        "positions": [1, 4],
+        "shield": "Y"
       }
     ],
-    farms: [
+    "roads": [
       {
-        positions: [a, h]
-      },
-      {
-        positions: [d, e]
-      }
-    ]
-  },
-
-  {
-    quantity: 2,
-    cities: [
-      {
-        positions: [2, 4],
-        shield: Y
+        "positions": [2, 3]
       }
     ],
-    farms: [
+    "farms": [
       {
-        positions: [a, h]
+        "positions": ["b", "e"]
       },
       {
-        positions: [d, e]
+        "positions": ["c", "d"]
       }
     ]
   },
 
   {
-    quantity: 2,
-    cities: [
+    "quantity": 1,
+    "cities": [
       {
-        positions: [1]
-      },
-      {
-        positions: [4]
+        "positions": [2, 4]
       }
     ],
-    farms: [
+    "farms": [
       {
-        positions: [b, c, d, e]
+        "positions": ["a", "h"]
+      },
+      {
+        "positions": ["d", "e"]
       }
     ]
   },
 
   {
-    quantity: 3,
-    cities: [
+    "quantity": 2,
+    "cities": [
       {
-        positions: [1]
-      },
-      {
-        positions: [3]
+        "positions": [2, 4],
+        "shield": "Y"
       }
     ],
-    farms: [
+    "farms": [
       {
-        positions: [b, c, f, g]
+        "positions": ["a", "h"]
+      },
+      {
+        "positions": ["d", "e"]
       }
     ]
   },
 
   {
-    quantity: 5,
-    cities: [
+    "quantity": 2,
+    "cities": [
       {
-        positions: [1]
+        "positions": [1]
+      },
+      {
+        "positions": [4]
       }
     ],
-    farms: [
+    "farms": [
       {
-        positions: [b, c, d, e, f, g]
+        "positions": ["b", "c", "d", "e"]
       }
     ]
   },
 
   {
-    quantity: 3,
-    cities: [
+    "quantity": 3,
+    "cities": [
       {
-        positions: [1]
+        "positions": [1]
+      },
+      {
+        "positions": [3]
       }
     ],
-    roads: [
+    "farms": [
       {
-        positions: [3, 4]
-      }
-    ]
-    farms: [
-      {
-        positions: [b, c, d, g]
-      },
-      {
-        positions: [e, f]
+        "positions": ["b", "c", "f", "g"]
       }
     ]
   },
 
   {
-    quantity: 3,
-    cities: [
+    "quantity": 5,
+    "cities": [
       {
-        positions: [1]
+        "positions": [1]
       }
     ],
-    roads: [
+    "farms": [
       {
-        positions: [2, 3]
-      }
-    ]
-    farms: [
-      {
-        positions: [b, e, f, g]
-      },
-      {
-        positions: [c, d]
+        "positions": ["b", "c", "d", "e", "f", "g"]
       }
     ]
   },
 
   {
-    quantity: 3,
-    cities: [
+    "quantity": 3,
+    "cities": [
       {
-        positions: [1]
+        "positions": [1]
       }
     ],
-    roads: [
+    "roads": [
       {
-        positions: [2]
-      },
-      {
-        positions: [3]
-      },
-      {
-        positions: [4]
+        "positions": [3, 4]
       }
-    ]
-    farms: [
+    ],
+    "farms": [
       {
-        positions: [b, g]
+        "positions": ["b", "c", "d", "g"]
       },
       {
-        positions: [c, d]
-      },
-      {
-        positions: [e, f]
+        "positions": ["e", "f"]
       }
     ]
   },
 
   {
-    quantity: 8,
-    roads: [
+    "quantity": 3,
+    "cities": [
       {
-        positions: [1, 3]
+        "positions": [1]
       }
-    ]
-    farms: [
+    ],
+    "roads": [
       {
-        positions: [a, b, c, d]
+        "positions": [2, 3]
+      }
+    ],
+    "farms": [
+      {
+        "positions": ["b", "e", "f", "g"]
       },
       {
-        positions: [e, f, g, h]
-      }
-    ]
-  },
-
-  {
-    quantity: 9,
-    roads: [
-      {
-        positions: [3, 4]
-      }
-    ]
-    farms: [
-      {
-        positions: [a, b, c, d, g, h]
-      },
-      {
-        positions: [e, f]
+        "positions": ["c", "d"]
       }
     ]
   },
 
   {
-    quantity: 4,
-    roads: [
+    "quantity": 3,
+    "cities": [
       {
-        positions: [2]
-      },
-      {
-        positions: [3]
-      },
-      {
-        positions: [4]
+        "positions": [1]
       }
-    ]
-    farms: [
+    ],
+    "roads": [
       {
-        positions: [a, b, g, h]
+        "positions": [2]
       },
       {
-        positions: [c, d]
+        "positions": [3]
       },
       {
-        positions: [e, f]
+        "positions": [4]
+      }
+    ],
+    "farms": [
+      {
+        "positions": ["b", "g"]
+      },
+      {
+        "positions": ["c", "d"]
+      },
+      {
+        "positions": ["e", "f"]
       }
     ]
   },
 
   {
-    quantity: 1,
-    roads: [
+    "quantity": 8,
+    "roads": [
       {
-        positions: [1]
+        "positions": [1, 3]
+      }
+    ],
+    "farms": [
+      {
+        "positions": ["a", "b", "c", "d"]
       },
       {
-        positions: [2]
-      },
-      {
-        positions: [3]
-      },
-      {
-        positions: [4]
+        "positions": ["e", "f", "g", "h"]
       }
     ]
-    farms: [
+  },
+
+  {
+    "quantity": 9,
+    "roads": [
       {
-        positions: [a, b]
+        "positions": [3, 4]
+      }
+    ],
+    "farms": [
+      {
+        "positions": ["a", "b", "c", "d", "g", "h"]
       },
       {
-        positions: [c, d]
+        "positions": ["e", "f"]
+      }
+    ]
+  },
+
+  {
+    "quantity": 4,
+    "roads": [
+      {
+        "positions": [2]
       },
       {
-        positions: [e, f]
+        "positions": [3]
       },
       {
-        positions: [g, h]
+        "positions": [4]
+      }
+    ],
+    "farms": [
+      {
+        "positions": ["a", "b", "g", "h"]
+      },
+      {
+        "positions": ["c", "d"]
+      },
+      {
+        "positions": ["e", "f"]
+      }
+    ]
+  },
+
+  {
+    "quantity": 1,
+    "roads": [
+      {
+        "positions": [1]
+      },
+      {
+        "positions": [2]
+      },
+      {
+        "positions": [3]
+      },
+      {
+        "positions": [4]
+      }
+    ],
+    "farms": [
+      {
+        "positions": ["a", "b"]
+      },
+      {
+        "positions": ["c", "d"]
+      },
+      {
+        "positions": ["e", "f"]
+      },
+      {
+        "positions": ["g", "h"]
       }
     ]
   }
