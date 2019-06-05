@@ -1,0 +1,38 @@
+[
+  {
+    "quantity": 4,
+    "cities": [
+      {
+        "positions": [1]
+      }
+    ],
+    "roads": [
+      {
+        "positions": [2, 4]
+      }
+    ],
+    "farms": [
+      {
+        "positions": ["b", "h"]
+      },
+      {
+        "positions": ["c", "d", "e", "f"]
+      }
+    ]
+  },
+
+  {
+    "quantity": 2,
+    "roads": [
+      {
+        "positions": [3]
+      }
+    ],
+    "farms": [
+      {
+        "positions": ["a", "b", "c", "d", "e", "f", "g", "h"]
+      }
+    ],
+    "cloister": "Y"
+  }
+]
