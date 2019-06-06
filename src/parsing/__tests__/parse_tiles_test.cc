@@ -15,33 +15,33 @@ TEST_CASE("Valid Tile Parse") {
     vector<City> cities = tile.getCities();
     REQUIRE(cities.size() == 1);
     City city = cities.at(0);
-    vector<int> city_positions = city.getPositions();
+    vector<FourSideItem::Position> city_positions = city.getPositions();
     REQUIRE(city_positions.size() == 1);
-    REQUIRE(city_positions.at(0) == 1);
+    REQUIRE(city_positions.at(0) == FourSideItem::Position::ONE);
     REQUIRE_FALSE(city.hasShield());
 
     vector<Road> roads = tile.getRoads();
     REQUIRE(roads.size() == 1);
     Road road = roads.at(0);
-    vector<int> road_positions = road.getPositions();
+    vector<FourSideItem::Position> road_positions = road.getPositions();
     REQUIRE(road_positions.size() == 2);
-    REQUIRE(road_positions.at(0) == 2);
-    REQUIRE(road_positions.at(1) == 4);
+    REQUIRE(road_positions.at(0) == FourSideItem::Position::TWO);
+    REQUIRE(road_positions.at(1) == FourSideItem::Position::FOUR);
 
     vector<Farm> farms = tile.getFarms();
     REQUIRE(farms.size() == 2);
     Farm farm = farms.at(0);
-    vector<string> farm_positions = farm.getPositions();
+    vector<Farm::Position> farm_positions = farm.getPositions();
     REQUIRE(farm_positions.size() == 2);
-    REQUIRE(farm_positions.at(0) == "b");
-    REQUIRE(farm_positions.at(1) == "h");
+    REQUIRE(farm_positions.at(0) == Farm::Position::B);
+    REQUIRE(farm_positions.at(1) == Farm::Position::H);
     farm = farms.at(1);
     farm_positions = farm.getPositions();
     REQUIRE(farm_positions.size() == 4);
-    REQUIRE(farm_positions.at(0) == "c");
-    REQUIRE(farm_positions.at(1) == "d");
-    REQUIRE(farm_positions.at(2) == "e");
-    REQUIRE(farm_positions.at(3) == "f");
+    REQUIRE(farm_positions.at(0) ==  Farm::Position::C);
+    REQUIRE(farm_positions.at(1) ==  Farm::Position::D);
+    REQUIRE(farm_positions.at(2) ==  Farm::Position::E);
+    REQUIRE(farm_positions.at(3) ==  Farm::Position::F);
 
     REQUIRE_FALSE(tile.hasCloister());
   }
@@ -55,23 +55,23 @@ TEST_CASE("Valid Tile Parse") {
     vector<Road> roads = tile.getRoads();
     REQUIRE(roads.size() == 1);
     Road road = roads.at(0);
-    vector<int> road_positions = road.getPositions();
+    vector<FourSideItem::Position> road_positions = road.getPositions();
     REQUIRE(road_positions.size() == 1);
-    REQUIRE(road_positions.at(0) == 3);
+    REQUIRE(road_positions.at(0) == FourSideItem::Position::THREE);
 
     vector<Farm> farms = tile.getFarms();
     REQUIRE(farms.size() == 1);
     Farm farm = farms.at(0);
-    vector<string> farm_positions = farm.getPositions();
+    vector<Farm::Position> farm_positions = farm.getPositions();
     REQUIRE(farm_positions.size() == 8);
-    REQUIRE(farm_positions.at(0) == "a");
-    REQUIRE(farm_positions.at(1) == "b");
-    REQUIRE(farm_positions.at(2) == "c");
-    REQUIRE(farm_positions.at(3) == "d");
-    REQUIRE(farm_positions.at(4) == "e");
-    REQUIRE(farm_positions.at(5) == "f");
-    REQUIRE(farm_positions.at(6) == "g");
-    REQUIRE(farm_positions.at(7) == "h");
+    REQUIRE(farm_positions.at(0) == Farm::Position::A);
+    REQUIRE(farm_positions.at(1) == Farm::Position::B);
+    REQUIRE(farm_positions.at(2) == Farm::Position::C);
+    REQUIRE(farm_positions.at(3) == Farm::Position::D);
+    REQUIRE(farm_positions.at(4) == Farm::Position::E);
+    REQUIRE(farm_positions.at(5) == Farm::Position::F);
+    REQUIRE(farm_positions.at(6) == Farm::Position::G);
+    REQUIRE(farm_positions.at(7) == Farm::Position::H);
 
     REQUIRE(tile.hasCloister());
   }

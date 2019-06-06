@@ -5,11 +5,18 @@
 
 class FourSideItem {
 public:
+  enum Position : int {
+    ONE = 1,
+    TWO = 2,
+    THREE = 3,
+    FOUR = 4,
+  };
+
   FourSideItem(std::vector<int> positions);
-  const std::vector<int>& getPositions() const;
+  const std::vector<Position>& getPositions() const;
 
 private:
-  std::vector<int> positions;
+  std::vector<Position> positions;
 };
 
 #endif

@@ -6,11 +6,22 @@
 
 class Farm {
 public:
+  enum Position : char {
+    A = 'a',
+    B = 'b',
+    C = 'c',
+    D = 'd',
+    E = 'e',
+    F = 'f',
+    G = 'g',
+    H = 'h'
+  };
+
   Farm(std::vector<std::string> positions);
-  const std::vector<std::string>& getPositions() const;
+  const std::vector<Position>& getPositions() const;
 
 private:
-  std::vector<std::string> positions;
+  std::vector<Position> positions;
 };
 
 #endif
