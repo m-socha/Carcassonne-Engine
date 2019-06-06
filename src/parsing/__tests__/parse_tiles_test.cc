@@ -15,6 +15,7 @@ TEST_CASE("Valid Tile Parse") {
     vector<City> cities = tile.getCities();
     REQUIRE(cities.size() == 1);
     City city = cities.at(0);
+    REQUIRE(city.getMeeple() == nullptr);
     vector<FourSideItem::Position> city_positions = city.getPositions();
     REQUIRE(city_positions.size() == 1);
     REQUIRE(city_positions.at(0) == FourSideItem::Position::ONE);
@@ -23,6 +24,7 @@ TEST_CASE("Valid Tile Parse") {
     vector<Road> roads = tile.getRoads();
     REQUIRE(roads.size() == 1);
     Road road = roads.at(0);
+    REQUIRE(road.getMeeple() == nullptr);
     vector<FourSideItem::Position> road_positions = road.getPositions();
     REQUIRE(road_positions.size() == 2);
     REQUIRE(road_positions.at(0) == FourSideItem::Position::TWO);
@@ -31,11 +33,13 @@ TEST_CASE("Valid Tile Parse") {
     vector<Farm> farms = tile.getFarms();
     REQUIRE(farms.size() == 2);
     Farm farm = farms.at(0);
+    REQUIRE(farm.getMeeple() == nullptr);
     vector<Farm::Position> farm_positions = farm.getPositions();
     REQUIRE(farm_positions.size() == 2);
     REQUIRE(farm_positions.at(0) == Farm::Position::B);
     REQUIRE(farm_positions.at(1) == Farm::Position::H);
     farm = farms.at(1);
+    REQUIRE(farm.getMeeple() == nullptr);
     farm_positions = farm.getPositions();
     REQUIRE(farm_positions.size() == 4);
     REQUIRE(farm_positions.at(0) ==  Farm::Position::C);
@@ -55,6 +59,7 @@ TEST_CASE("Valid Tile Parse") {
     vector<Road> roads = tile.getRoads();
     REQUIRE(roads.size() == 1);
     Road road = roads.at(0);
+    REQUIRE(road.getMeeple() == nullptr);
     vector<FourSideItem::Position> road_positions = road.getPositions();
     REQUIRE(road_positions.size() == 1);
     REQUIRE(road_positions.at(0) == FourSideItem::Position::THREE);
@@ -62,6 +67,7 @@ TEST_CASE("Valid Tile Parse") {
     vector<Farm> farms = tile.getFarms();
     REQUIRE(farms.size() == 1);
     Farm farm = farms.at(0);
+    REQUIRE(farm.getMeeple() == nullptr);
     vector<Farm::Position> farm_positions = farm.getPositions();
     REQUIRE(farm_positions.size() == 8);
     REQUIRE(farm_positions.at(0) == Farm::Position::A);

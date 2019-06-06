@@ -2,7 +2,7 @@ CXX = g++
 CXXFLAGS = -Wall -O2 -std=c++11
 MAKEFILE_NAME = ${firstword ${MAKEFILE_LIST}}
 
-OBJECTS = src/parsing/parse_tiles.o src/tiles/four_side_item.o src/tiles/road.o src/tiles/city.o src/tiles/farm.o src/tiles/tile.o src/tiles/placed_tile.o
+OBJECTS = src/parsing/parse_tiles.o src/tiles/four_side_item.o src/tiles/road.o src/tiles/city.o src/tiles/farm.o src/tiles/tile.o src/tiles/placed_tile.o src/players/player.o src/players/meeple.o src/tiles/tile_item.o
 
 EXEC1 = engine
 EXEC2 = tests

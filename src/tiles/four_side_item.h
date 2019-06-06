@@ -2,8 +2,9 @@
 #define FOUR_SIDE_ITEM_H
 
 #include <vector>
+#include "tile_item.h"
 
-class FourSideItem {
+class FourSideItem : public TileItem {
 public:
   enum Position : int {
     ONE = 1,

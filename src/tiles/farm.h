@@ -3,8 +3,9 @@
 
 #include <string>
 #include <vector>
+#include "tile_item.h"
 
-class Farm {
+class Farm : public TileItem {
 public:
   enum Position : char {
     A = 'a',
