@@ -1,9 +1,11 @@
 #ifndef TILE_H
 #define TILE_H
 
+#include <boost/optional.hpp>
 #include "city.h"
 #include "road.h"
 #include "farm.h"
+#include "cloister.h"
 
 class Tile {
 public:
@@ -11,13 +13,13 @@ public:
   const std::vector<City>& getCities() const;
   const std::vector<Road>& getRoads() const;
   const std::vector<Farm>& getFarms() const;
-  bool hasCloister() const;
+  const boost::optional<Cloister> getCloister() const;
 
 private:
   std::vector<City> cities;
   std::vector<Road> roads;
   std::vector<Farm> farms;
-  bool has_cloister;
+  boost::optional<Cloister> cloister;
 };
 
 #endif

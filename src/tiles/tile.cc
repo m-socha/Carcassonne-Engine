@@ -3,7 +3,11 @@
 using namespace std;
 
 Tile::Tile(vector<City> cities, vector<Road> roads, vector<Farm> farms, bool has_cloister)
-  : cities(cities), roads(roads), farms(farms), has_cloister(has_cloister) {}
+  : cities(cities), roads(roads), farms(farms) {
+    if (has_cloister) {
+      this->cloister = Cloister();
+    }
+  }
 
 const vector<City>& Tile::getCities() const {
   return this->cities;
@@ -17,6 +21,6 @@ const vector<Farm>& Tile::getFarms() const {
   return this->farms;
 }
 
-bool Tile::hasCloister() const {
-  return this->has_cloister;
+const boost::optional<Cloister> Tile::getCloister() const {
+  return this->cloister;
 }

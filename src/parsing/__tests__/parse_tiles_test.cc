@@ -47,7 +47,8 @@ TEST_CASE("Valid Tile Parse") {
     REQUIRE(farm_positions.at(2) ==  Farm::Position::E);
     REQUIRE(farm_positions.at(3) ==  Farm::Position::F);
 
-    REQUIRE_FALSE(tile.hasCloister());
+    boost::optional<Cloister> cloister = tile.getCloister();
+    REQUIRE_FALSE(cloister.is_initialized());
   }
 
   for (int i = 4; i < 6; ++i) {
@@ -79,6 +80,8 @@ TEST_CASE("Valid Tile Parse") {
     REQUIRE(farm_positions.at(6) == Farm::Position::G);
     REQUIRE(farm_positions.at(7) == Farm::Position::H);
 
-    REQUIRE(tile.hasCloister());
+    boost::optional<Cloister> cloister = tile.getCloister();
+    REQUIRE(cloister.is_initialized());
+    REQUIRE(cloister->getMeeple() == nullptr);
   }
 }
