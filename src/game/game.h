@@ -2,6 +2,7 @@
 #define GAME_H
 
 #include "../players/player.h"
+#include "tile_grid.h"
 
 class Game {
 public:
@@ -10,6 +11,7 @@ public:
 
 private:
   std::vector<Player*> players;
+  TileGrid tile_grid;
 };
 
 #endif
