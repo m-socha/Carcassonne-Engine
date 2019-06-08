@@ -7,6 +7,7 @@
 class Player {
 public:
   Player();
+  Meeple* getMeeple(int index);
 
 private:
   static const int NUM_PLAYER_MEEPLES = 7;
