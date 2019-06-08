@@ -9,3 +9,11 @@ Player* Meeple::getPlayer() const {
 bool Meeple::isPlaced() const {
   return this->placed;
 }
+
+void Meeple::markPlaced() {
+  this->placed = true;
+}
+
+void Meeple::markUnplaced() {
+  this->placed = false;
+}

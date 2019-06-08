@@ -7,9 +7,11 @@ Meeple* TileItem::getMeeple() const {
 }
 
 void TileItem::setMeeple(Meeple* meeple) {
+  this->meeple->markPlaced();
   this->meeple = meeple;
 }
 
 void TileItem::removeMeeple() {
+  this->meeple->markUnplaced();
   this->meeple = nullptr;
 }
