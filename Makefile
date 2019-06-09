@@ -2,7 +2,7 @@ CXX = g++
 CXXFLAGS = -Wall -O2 -std=c++11
 MAKEFILE_NAME = ${firstword ${MAKEFILE_LIST}}
 
-OBJECTS = src/parsing/parse_tiles.o src/tiles/four_side_item.o src/tiles/road.o src/tiles/city.o src/tiles/farm.o src/tiles/tile.o src/tiles/placed_tile.o src/players/player.o src/players/meeple.o src/tiles/tile_item.o src/tiles/cloister.o src/game/game.o src/game/tile_grid.o
+OBJECTS = src/parsing/parse_tiles.o src/tiles/four_side_item.o src/tiles/road.o src/tiles/city.o src/tiles/farm.o src/tiles/tile.o src/tiles/placed_tile.o src/players/player.o src/players/meeple.o src/tiles/tile_item.o src/tiles/cloister.o src/game/game.o src/game/tile_grid.o src/evaluation/legal_move_evaluation.o
 
 EXEC1 = engine
 EXEC2 = tests
@@ -21,7 +21,7 @@ tests : ${EXEC2}
 ${EXEC1} : ${OBJECTS} src/main.o
 	${CXX} ${CXXFLAGS} $^ -o $@
 
-${EXEC2} : ${OBJECTS} src/parsing/__tests__/parse_tiles_test.o src/game/__tests__/tile_placement_test.o src/tiles/__tests__/tile_rotation_test.o
+${EXEC2} : ${OBJECTS} src/parsing/__tests__/parse_tiles_test.o src/game/__tests__/tile_placement_test.o src/tiles/__tests__/tile_rotation_test.o src/game/__tests__/tile_grid_test.o
 	${CXX} ${CXXFLAGS} $^ -o $@
 
 #############################################################

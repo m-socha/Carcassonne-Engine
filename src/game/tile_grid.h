@@ -12,6 +12,8 @@ public:
   boost::optional<PlacedTile> getTile(int x, int y) const;
   void placeTile(PlacedTile tile, int x, int y);
 
+  bool isEmpty() const;
+
 private:
   static const int INIT_GRID_DIM = 51;
   static const int GRID_DIM_EXPANSION = 50;

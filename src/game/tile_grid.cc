@@ -36,6 +36,19 @@ void TileGrid::placeTile(PlacedTile tile, int x, int y) {
   }
 }
 
+bool TileGrid::isEmpty() const {
+  for (int x = 0; x < this->grid_dim; ++x) {
+    for (int y = 0; y < this->grid_dim; ++y) {
+      boost::optional<PlacedTile> tile = this->tiles[x * this->grid_dim + y];
+      if (tile.is_initialized()) {
+        return false;
+      }
+    }
+  }
+
+  return true;
+}
+
 int TileGrid::getAdjustedCoordintate(int coordinate, int grid_dim) const {
   int offset = (grid_dim - 1) / 2;
   return coordinate + offset;
