@@ -9,6 +9,13 @@ Tile::Tile(vector<City> cities, vector<Road> roads, vector<Farm> farms, bool has
     }
   }
 
+bool Tile::operator==(const Tile &tile) const {
+  return this->cities == tile.cities &&
+    this->roads == tile.roads &&
+    this->farms == tile.farms &&
+    this->cloister == tile.cloister;
+}
+
 const vector<City>& Tile::getCities() const {
   return this->cities;
 }

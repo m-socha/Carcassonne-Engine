@@ -6,6 +6,9 @@
 class City : public FourSideItem {
 public:
   City(std::vector<int> positions, bool has_shield);
+
+  bool operator==(const City &city) const;
+
   bool hasShield() const;
 
 private:

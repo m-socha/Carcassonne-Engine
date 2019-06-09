@@ -17,9 +17,17 @@ TEST_CASE("Out of Range Tile Uninitialized") {
 
 TEST_CASE("Simple Tile Placement") {
   vector<City> cities;
+  City city = City({1}, false);
+  cities.push_back(city);
+
   vector<Road> roads;
+  Road road = Road({2, 4});
+  roads.push_back(road);
+
   vector<Farm> farms;
-  Farm farm = Farm({"a", "b", "c", "d", "e", "f", "g", "h"});
+  Farm farm = Farm({"b", "h"});
+  farms.push_back(farm);
+  farm = Farm({"c", "d", "e", "f"});
   farms.push_back(farm);
 
   Tile tile(cities, roads, farms, false);
@@ -30,7 +38,7 @@ TEST_CASE("Simple Tile Placement") {
   boost::optional<PlacedTile> grid_tile = tile_grid.getTile(-5, 11);
 
   REQUIRE(grid_tile.is_initialized());
-  REQUIRE(grid_tile->getRotation() == PlacedTile::Rotation::ONE);
+  REQUIRE(grid_tile.get() == placed_tile);
 }
 
 TEST_CASE("Tile Placement Triggering Expansion") {

@@ -11,6 +11,10 @@ Farm::Farm(vector<string> positions) {
     });
 }
 
+bool Farm::operator==(const Farm &farm) const {
+  return this->positions == farm.positions;
+}
+
 const vector<Farm::Position>& Farm::getPositions() const {
   return this->positions;
 }

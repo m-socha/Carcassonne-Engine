@@ -19,6 +19,9 @@ public:
   };
 
   Farm(std::vector<std::string> positions);
+
+  bool operator==(const Farm &farm) const;
+
   const std::vector<Position>& getPositions() const;
 
 private:

@@ -6,6 +6,8 @@
 class Cloister : public TileItem {
 public:
   Cloister();
+
+  bool operator==(const Cloister &cloister) const;
 };
 
 #endif

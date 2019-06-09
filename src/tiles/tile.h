@@ -10,6 +10,9 @@
 class Tile {
 public:
   Tile(std::vector<City> cities, std::vector<Road> roads, std::vector<Farm> farms, bool has_cloister);
+
+  bool operator==(const Tile &tile) const;
+
   const std::vector<City>& getCities() const;
   const std::vector<Road>& getRoads() const;
   const std::vector<Farm>& getFarms() const;

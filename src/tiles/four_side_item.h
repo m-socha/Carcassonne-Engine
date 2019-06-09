@@ -16,7 +16,7 @@ public:
   FourSideItem(std::vector<int> positions);
   const std::vector<Position>& getPositions() const;
 
-private:
+protected:
   std::vector<Position> positions;
 };
 

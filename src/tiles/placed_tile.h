@@ -13,6 +13,9 @@ public:
   };
 
   PlacedTile(Tile tile, int rotation);
+
+  bool operator==(const PlacedTile &placed_tile) const;
+
   Tile getTile() const;
   Rotation getRotation() const;
 

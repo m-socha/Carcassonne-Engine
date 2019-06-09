@@ -6,6 +6,8 @@
 class Road : public FourSideItem {
 public:
   Road(std::vector<int> positions);
+
+  bool operator==(const Road &road) const;
 };
 
 #endif
