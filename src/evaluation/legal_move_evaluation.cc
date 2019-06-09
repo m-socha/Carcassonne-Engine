@@ -2,26 +2,26 @@
 
 static bool exists_adjacent_tile(const TileGrid& grid, int x, int y) {
   boost::optional<PlacedTile> adjacent_tile = grid.getTile(x - 1, y);
-  if (!adjacent_tile.is_initialized()) {
-    return false;
+  if (adjacent_tile.is_initialized()) {
+    return true;
   }
 
   adjacent_tile = grid.getTile(x + 1, y);
-  if (!adjacent_tile.is_initialized()) {
-    return false;
+  if (adjacent_tile.is_initialized()) {
+    return true;
   }
 
   adjacent_tile = grid.getTile(x, y - 1);
-  if (!adjacent_tile.is_initialized()) {
-    return false;
+  if (adjacent_tile.is_initialized()) {
+    return true;
   }
 
   adjacent_tile = grid.getTile(x, y + 1);
-  if (!adjacent_tile.is_initialized()) {
-    return false;
+  if (adjacent_tile.is_initialized()) {
+    return true;
   }
 
-  return true;
+  return false;
 }
 
 bool is_placement_legal(const TileGrid& grid, PlacedTile tile, int x, int y) {
