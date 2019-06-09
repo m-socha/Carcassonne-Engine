@@ -21,6 +21,7 @@ private:
 
   int getAdjustedCoordintate(int coordinate, int grid_dim) const;
   int getGameCoordintate(int coordinate) const;
+  bool isAdjustedCoordinteInRange(int coordinate) const;
 
   void expandGrid();
 };

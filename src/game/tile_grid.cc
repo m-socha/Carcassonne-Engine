@@ -14,11 +14,11 @@ boost::optional<PlacedTile> TileGrid::getTile(int x, int y) const {
   int adjusted_x = this->getAdjustedCoordintate(x, this->grid_dim);
   int adjusted_y = this->getAdjustedCoordintate(y, this->grid_dim);
 
-  int index = adjusted_x * this->grid_dim + adjusted_y;
-  if (index < 0 || index >= this->grid_dim * this->grid_dim) {
-    return boost::optional<PlacedTile>();
+  if (this->isAdjustedCoordinteInRange(adjusted_x) &&
+    this->isAdjustedCoordinteInRange(adjusted_y)) {
+      return this->tiles[adjusted_x * this->grid_dim + adjusted_y];
   } else {
-    return this->tiles[adjusted_x * this->grid_dim + adjusted_y];
+    return boost::optional<PlacedTile>();
   }
 }
 
@@ -27,12 +27,12 @@ void TileGrid::placeTile(PlacedTile tile, int x, int y) {
   int adjusted_y = this->getAdjustedCoordintate(y, this->grid_dim);
 
   // TODO: Verify placement is legal
-  int index = adjusted_x * this->grid_dim + adjusted_y;
-  if (index < 0 || index >= this->grid_dim * this->grid_dim) {
+  if (this->isAdjustedCoordinteInRange(adjusted_x) &&
+    this->isAdjustedCoordinteInRange(adjusted_y)) {
+      this->tiles[adjusted_x * this->grid_dim + adjusted_y] = tile;
+  } else {
     this->expandGrid();
     this->placeTile(tile, x, y);
-  } else {
-    this->tiles[index] = tile;
   }
 }
 
@@ -44,6 +44,10 @@ int TileGrid::getAdjustedCoordintate(int coordinate, int grid_dim) const {
 int TileGrid::getGameCoordintate(int coordinate) const {
   int offset = (this->grid_dim - 1) / 2;
   return coordinate - offset;
+}
+
+bool TileGrid::isAdjustedCoordinteInRange(int coordinate) const {
+  return coordinate >= 0 && coordinate < this->grid_dim;
 }
 
 void TileGrid::expandGrid() {
