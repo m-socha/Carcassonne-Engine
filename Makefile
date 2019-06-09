@@ -21,7 +21,7 @@ tests : ${EXEC2}
 ${EXEC1} : ${OBJECTS} src/main.o
 	${CXX} ${CXXFLAGS} $^ -o $@
 
-${EXEC2} : ${OBJECTS} src/parsing/__tests__/parse_tiles_test.o
+${EXEC2} : ${OBJECTS} src/parsing/__tests__/parse_tiles_test.o src/game/__tests__/tile_placement_test.o
 	${CXX} ${CXXFLAGS} $^ -o $@
 
 #############################################################
