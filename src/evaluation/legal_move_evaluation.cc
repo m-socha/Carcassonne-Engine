@@ -1,27 +1,20 @@
 #include "legal_move_evaluation.h"
 
+using namespace std;
+
 static bool exists_adjacent_tile(const TileGrid& grid, int x, int y) {
-  boost::optional<PlacedTile> adjacent_tile = grid.getTile(x - 1, y);
-  if (adjacent_tile.is_initialized()) {
-    return true;
-  }
+  vector<boost::optional<PlacedTile>> adjacent_tiles = {
+    grid.getTile(x - 1, y),
+    grid.getTile(x + 1, y),
+    grid.getTile(x, y - 1),
+    grid.getTile(x, y + 1)
+  };
 
-  adjacent_tile = grid.getTile(x + 1, y);
-  if (adjacent_tile.is_initialized()) {
-    return true;
-  }
-
-  adjacent_tile = grid.getTile(x, y - 1);
-  if (adjacent_tile.is_initialized()) {
-    return true;
-  }
-
-  adjacent_tile = grid.getTile(x, y + 1);
-  if (adjacent_tile.is_initialized()) {
-    return true;
-  }
-
-  return false;
+  return std::any_of(adjacent_tiles.begin(), adjacent_tiles.end(),
+    [](boost::optional<PlacedTile> tile){
+      return tile.is_initialized();
+    }
+  );
 }
 
 bool is_placement_legal(const TileGrid& grid, PlacedTile tile, int x, int y) {
