@@ -14,3 +14,15 @@ FourSideItem::FourSideItem(vector<int> positions) {
 const vector<FourSideItem::Position>& FourSideItem::getPositions() const {
   return this->positions;
 }
+
+void FourSideItem::rotate(TileRotation rotation) {
+  for_each(this->positions.begin(), this->positions.end(),
+    [rotation](FourSideItem::Position& pos) {
+      int new_pos = (pos + rotation);
+      if (new_pos > 4) {
+        new_pos -= 4;
+      }
+      pos = static_cast<FourSideItem::Position>(new_pos);
+    }
+  );
+}

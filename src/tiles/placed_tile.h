@@ -5,23 +5,19 @@
 
 class PlacedTile {
 public:
-  enum Rotation : int {
-    ONE = 1,
-    TWO = 2,
-    THREE = 3,
-    FOUR = 4
-  };
 
   PlacedTile(Tile tile, int rotation);
 
   bool operator==(const PlacedTile &placed_tile) const;
 
   Tile getTile() const;
-  Rotation getRotation() const;
+  TileRotation getRotation() const;
+
+  Tile getRotatedTile() const;
 
 private:
   Tile tile;
-  Rotation rotation;
+  TileRotation rotation;
 };
 
 #endif

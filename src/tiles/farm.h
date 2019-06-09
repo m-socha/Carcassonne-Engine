@@ -4,6 +4,7 @@
 #include <string>
 #include <vector>
 #include "tile_item.h"
+#include "tile_rotation.h"
 
 class Farm : public TileItem {
 public:
@@ -23,6 +24,8 @@ public:
   bool operator==(const Farm &farm) const;
 
   const std::vector<Position>& getPositions() const;
+
+  void rotate(TileRotation rotation);
 
 private:
   std::vector<Position> positions;

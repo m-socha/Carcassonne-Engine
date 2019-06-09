@@ -31,7 +31,7 @@ TEST_CASE("Simple Tile Placement") {
   farms.push_back(farm);
 
   Tile tile(cities, roads, farms, false);
-  PlacedTile placed_tile(tile, PlacedTile::Rotation::ONE);
+  PlacedTile placed_tile(tile, TileRotation::ZERO);
 
   TileGrid tile_grid;
   tile_grid.placeTile(placed_tile, -5, 11);
@@ -49,7 +49,7 @@ TEST_CASE("Tile Placement Triggering Expansion") {
   farms.push_back(farm);
 
   Tile tile(cities, roads, farms, false);
-  PlacedTile placed_tile(tile, PlacedTile::Rotation::ONE);
+  PlacedTile placed_tile(tile, TileRotation::ZERO);
 
   TileGrid tile_grid;
   for (int x = 0; x < 200; ++x) {

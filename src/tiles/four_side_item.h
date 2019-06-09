@@ -3,6 +3,7 @@
 
 #include <vector>
 #include "tile_item.h"
+#include "tile_rotation.h"
 
 class FourSideItem : public TileItem {
 public:
@@ -15,6 +16,8 @@ public:
 
   FourSideItem(std::vector<int> positions);
   const std::vector<Position>& getPositions() const;
+
+  void rotate(TileRotation rotation);
 
 protected:
   std::vector<Position> positions;
