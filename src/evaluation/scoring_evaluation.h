@@ -1,5 +1,5 @@
-#ifndef SCORING_H
-#define SCORING_H
+#ifndef SCORING_EVALUATION_H
+#define SCORING_EVALUATION_H
 
 #include "../game/tile_grid.h"
 
