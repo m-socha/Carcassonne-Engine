@@ -13,7 +13,7 @@ static vector<boost::optional<PlacedTile>> get_adjacent_tiles(const TileGrid& gr
 
 static bool exists_adjacent_tile(const TileGrid& grid, int x, int y) {
   vector<boost::optional<PlacedTile>> adjacent_tiles = get_adjacent_tiles(grid, x, y);
-  return std::any_of(adjacent_tiles.begin(), adjacent_tiles.end(),
+  return any_of(adjacent_tiles.begin(), adjacent_tiles.end(),
     [](const boost::optional<PlacedTile>& tile) {
       return tile.is_initialized();
     }
@@ -27,12 +27,12 @@ static bool tile_side_pair_matches(Tile tile, boost::optional<PlacedTile> adj_ti
   }
 
   vector<City> cities = tile.getCities();
-  if (std::any_of(cities.begin(), cities.end(), [tile_side](const City& city) {
+  if (any_of(cities.begin(), cities.end(), [tile_side](const City& city) {
     vector<FourSideItem::Position> positions = city.getPositions();
     return find(positions.begin(), positions.end(), tile_side) != positions.end();
   })) {
     vector<City> adj_cities = adj_tile->getRotatedTile().getCities();
-    if (!std::any_of(adj_cities.begin(), adj_cities.end(), [adj_tile_side](const City& city) {
+    if (!any_of(adj_cities.begin(), adj_cities.end(), [adj_tile_side](const City& city) {
       vector<FourSideItem::Position> positions = city.getPositions();
       return find(positions.begin(), positions.end(), adj_tile_side) != positions.end();
     })) {
@@ -41,12 +41,12 @@ static bool tile_side_pair_matches(Tile tile, boost::optional<PlacedTile> adj_ti
   }
 
   vector<Road> roads = tile.getRoads();
-  if (std::any_of(roads.begin(), roads.end(), [tile_side](const Road& road) {
+  if (any_of(roads.begin(), roads.end(), [tile_side](const Road& road) {
     vector<FourSideItem::Position> positions = road.getPositions();
     return find(positions.begin(), positions.end(), tile_side) != positions.end();
   })) {
     vector<Road> adj_roads = adj_tile->getRotatedTile().getRoads();
-    if (!std::any_of(adj_roads.begin(), adj_roads.end(), [adj_tile_side](const Road& road) {
+    if (!any_of(adj_roads.begin(), adj_roads.end(), [adj_tile_side](const Road& road) {
       vector<FourSideItem::Position> positions = road.getPositions();
       return find(positions.begin(), positions.end(), adj_tile_side) != positions.end();
     })) {

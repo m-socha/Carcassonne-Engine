@@ -1,6 +1,8 @@
 #include "city.h"
 
-City::City(std::vector<int> positions, bool has_shield) :
+using namespace std;
+
+City::City(vector<int> positions, bool has_shield) :
   FourSideItem(positions), has_shield(has_shield) {}
 
 bool City::operator==(const City &city) const {
